@@ -1,19 +1,27 @@
 <div class="container">
-  <div class="mb-3">
-    <label for="todo-item" class="form-label">Todo</label>
-    <input type="text" class="form-control" id="todo-item" placeholder="Enter a Todo">
-  </div>
-  <div class="mb-3">
-    <label for="todo-category" class="form-label">Category</label>
-    <input type="text" class="form-control" id="todo-category" placeholder="Enter a Category">
-  </div>
-  <div class="mb-3">
-    <label for="todo-priority-level" class="form-label">Priority Level</label>
-    <input type="text" class="form-control" id="todo-priority-level" placeholder="High, Medium, or Low">
-  </div>
-  <div class="mb-3">
-    <label for="todo-notes" class="form-label">Notes</label>
-    <input type="text" class="form-control" id="todo-notes" placeholder="Enter Notes for Todo">
-  </div>
+  <h2>Enter a Task</h2>
+  <hr>
+  <!-- Todo Form -->
+  <form (ngSubmit)="onSubmit(todoFormRef)" #todoFormRef="ngForm">
+    <div class="mb-3">
+      <label for="task-item" class="form-label">Task</label>
+      <input type="text" class="form-control" id="taks-item" ngModel name="task" required>
+    </div>
+    <div class="mb-3">
+      <label for="task-category" class="form-label">Category</label>
+      <input type="text" class="form-control" id="task-category" ngModel name="category" required>
+    </div>
+    <div class="mb-3">
+      <label for="task-priority-level" class="form-label">Priority Level</label>
+      <input type="text" class="form-control" id="task-priority-level" placeholder="High, Medium, or Low" ngModel name="priority" required>
+    </div>
+    <div class="mb-3">
+      <label for="task-notes" class="form-label">Notes</label>
+      <input type="text" class="form-control" id="task-notes"  ngModel name="notes" required>
+    </div>
+    <!-- Button...edit, save, delete -->
+    <div class="btn-group mr-2" role="group">
+      <button type="submit" class="btn btn-secondary" [disabled]="!todoFormRef.valid">Save</button>
+    </div>
+  </form>
 </div>
-
