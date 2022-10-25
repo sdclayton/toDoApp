@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { NgForm } from '@angular/forms'
-import { TodosComponent } from '../todos.component';
 
 @Component({
   selector: 'app-form-todo',
