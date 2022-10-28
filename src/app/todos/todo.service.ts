@@ -12,4 +12,8 @@ export class TodoService {
   getTodos() {
     return this.todos.slice();
   }
+
+  addTodo(todo: Todo) {
+    this.todos.push(todo)
+  }
 }
