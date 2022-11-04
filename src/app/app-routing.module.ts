@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TodosComponent } from './todos/todos.component';
 
-const routes: Routes = [];
+const appRoutes: Routes = [
+  { path: 'todos', component: TodosComponent}
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

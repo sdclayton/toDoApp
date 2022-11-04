@@ -17,8 +17,9 @@ export class FormTodoComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     console.log(form.value)
+    // Extra information to pass as argument to addTodo
+
+    // const newTodo = new Todo("todo", "category", "priority", "notes")
+    // this.todoService.addTodo(newTodo)
   }
-
-
-
 }

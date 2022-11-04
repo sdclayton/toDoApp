@@ -1,16 +1,9 @@
-<div class="container">
-  <div *ngFor="let todo of todos">
-      <div>
-        {{ todo.task }}
-      </div>
-      <div>
-        {{ todo.category }}
-      </div>
-      <div>
-        {{ todo.priority }}
-      </div>
-      <div>
-        {{ todo.notes }}
-      </div>
+<div class="card" *ngFor="let todo of todos">
+  <h4 class="card-header">{{ todo.task }}</h4>
+  <div class="card-body">
+    <h5 class="card-title">{{ todo.category }}</h5>
+    <p class="card-text">{{ todo.notes }}</p>
+    <button type="button" class="btn btn-primary btn-sm">Edit</button>
+    <button type="button" class="btn btn-secondary btn-sm">Delete</button>
   </div>
 </div>
